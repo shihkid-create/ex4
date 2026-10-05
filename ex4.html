@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- 2-8. 網頁標題 -->
+<title>施宇哲的作業二</title>
+
+<!-- 2-2. 網頁圖示 -->
+<link rel="icon" href="img/name.png" type="image/png">
+
+<!-- 2-1. 啟動時出現對話框 -->
+<script>
+    alert("歡迎來到施宇哲的網頁！");
+</script>
+
+<style>
+    body { margin: 0; background-color: #E6ECF5; font-family: sans-serif; }
+    
+    /* 容器：800px x 800px 正方形外框 */
+    .container { width: 800px; height: 800px; margin: 20px auto; background-color: white; box-sizing: border-box; display: flex; flex-direction: column; }
+    
+    /* 四區塊配色 */
+    header { background-color: #3B5998; color: white; padding: 15px; }
+    nav { background-color: #8B9DC3; padding: 10px; }
+    nav a { color: white; margin-right: 15px; text-decoration: none; font-weight: bold; }
+    
+    /* 主要內容區：刪除側邊欄，填滿寬度與正方形剩餘空間 */
+    .main-box { flex: 1; overflow-y: auto; background-color: #F7F9FC; }
+    main { padding: 20px; color: #333333; line-height: 1.5; }
+    
+    footer { background-color: #DFE3EE; padding: 12px; font-size: 14px; color: #333; text-align: center; }
+    footer a { color: #3B5998; }
+
+    blockquote { background-color: #E9EEF4; border-left: 4px solid #3B5998; margin: 10px 0; padding: 8px 12px; }
+    .toc { background-color: #FFFFFF; border: 1px solid #D0D7DE; padding: 10px; margin-bottom: 15px; }
+    .toc a { color: #3B5998; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- 2-4. 頁首 -->
+    <header>
+        <h1 style="margin:0;">你好 南台</h1>
+        <p style="margin:5px 0 0 0;">非常無聊網頁</p>
+    </header>
+
+    <!-- 2-5. 導覽列 (1. 連結至 aboutme.html) -->
+    <nav>
+        <a href="#">🏠 首頁</a>
+        <a href="aboutme.html">🛒 關於我</a>
+        <a href="#">🖼️ 作品集</a>
+        <a href="#">📂 聯絡</a>
+        <a href="#">📄 分享</a>
+    </nav>
+
+    <!-- 2-3. 中間主要內容 (無側邊欄、填滿寬度) -->
+    <div class="main-box">
+        <main id="aboutme">
+            <h2 style="margin-top:0;">主要內容</h2>
+            <p>▶ 班級：電商四甲</p>
+            <p>▶ 姓名：施宇哲</p>
+            <p>▶ 學號：4B255002</p>
+            <p>▶ 大頭照與 PNG 圖示：</p>
+            
+            <!-- 2-10. 圖片存於 img 資料夾 -->
+            <img src="img/name.png" height="80" alt="網頁圖示">
+
+            <!-- 2-3. 目錄超連結放於最上面（頁內超連結/書籤） -->
+            <div class="toc">
+                <h3 style="margin:0 0 5px 0; font-size:16px;">📌 目錄選單</h3>
+                <ul style="margin:0; padding-left:20px;">
+                    <li><a href="#sec1">基本資料</a></li>
+                    <li><a href="#sec2">自我介紹</a></li>
+                    <li><a href="#sec3">技能與學習</a></li>
+                    <li><a href="#sec4">座右銘</a></li>
+                    <li><a href="#sec5">學校連結</a></li>
+                </ul>
+            </div>
+
+            <!-- 2-7. 水平線 -->
+            <hr>
+
+            <!-- 2-3. 標題與頁內超連結 -->
+            <h3 id="sec1">1. 基本資料</h3>
+            <!-- 2-8. 自己姓名的注音標示 -->
+            <p>姓名：<ruby>施<rt>ㄕ</rt></ruby> <ruby>宇<rt>ㄩˇ</rt></ruby> <ruby>哲<rt>ㄓㄜˊ</rt></ruby></p>
+            <!-- 2-4. 分段效果 -->
+            <p>就讀南臺科技大學電子商務系四甲。</p>
+
+            <hr>
+
+            <h3 id="sec2">2. 自我介紹</h3>
+            <!-- 2-8. B I U S 螢光標記 -->
+            <p>學習<b>網頁程式</b>與<i>電子商務</i>，<u>過程很有趣</u>。<s style="color:gray;">（除錯中）</s></p>
+            <p>重點：<mark>HTML5、CSS3、GitHub</mark>。</p>
+
+            <hr>
+
+            <h3 id="sec3">3. 技能與學習</h3>
+            <!-- 2-5. 項目符號 -->
+            <p><b>學習項目：</b></p>
+            <ul>
+                <li>HTML 語法</li>
+                <li>CSS 樣式</li>
+            </ul>
+
+            <!-- 2-5. 項目編號 -->
+            <p><b>學習步驟：</b></p>
+            <ol>
+                <li>撰寫網頁</li>
+                <li>發布至 GitHub</li>
+            </ol>
+
+            <hr>
+
+            <h3 id="sec4">4. 座右銘</h3>
+            <!-- 2-6. 引述區塊 -->
+            <blockquote>
+                「打好基礎，就能做出好網頁。」
+            </blockquote>
+
+            <hr>
+
+            <h3 id="sec5">5. 學校連結</h3>
+            <!-- 2-9. 南台首頁及 FlipClass 超連結 -->
+            <p>
+                <a href="https://www.stust.edu.tw/" target="_blank" style="color:#3B5998;">🏫 南台首頁</a>｜
+                <a href="https://flipclass.stust.edu.tw/" target="_blank" style="color:#3B5998;">📚 FlipClass</a>
+            </p>
+        </main>
+    </div>
+
+    <!-- 2-7. 頁尾 -->
+    <footer>
+        <p style="margin:0;">©南台4B255002| 地址：台南市永康區南台街1號 | 電話：(06) 253-3131</p>
+        <p style="margin:3px 0 0 0;">Email: 4B255002@stust.edu.tw | 社群：<a href="#">Facebook</a> | <a href="#">Back to top</a></p>
+    </footer>
+
+</div>
+
+</body>
+</html>
